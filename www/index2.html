@@ -10,9 +10,13 @@
   <title>Lazy 2048</title>
 </head>
 
-<body onresize="app.onResize()" >
+<body onresize="app.onResize()" onload="repeatad();">
   
-
+<script type="text/javascript">
+  function repeatad(){
+    setInterval(function(){app.requestInterstitial(true);},5000);
+  }
+</script>
 
 <div id=container><canvas id=backcanvas></canvas><canvas id=canvas></canvas>
     <div id=load>
