@@ -56,7 +56,8 @@ var app = {
             document.addEventListener(admob.events.onAdLoaded, this.onAdLoaded, false);
             document.addEventListener(admob.events.onAdFailedToLoad, this.onAdFailedToLoad, false);
             document.addEventListener(admob.events.onAdOpened, function (e) { }, false);
-            document.addEventListener(admob.events.onAdClosed, function (e) { }, false);
+            document.addEventListener(admob.events.onAdClosed, function (e) {document.getElementById("container").setAttribute('style', 'display:block;');
+        }, false);
             document.addEventListener(admob.events.onAdLeftApplication, function (e) { }, false);
             document.addEventListener(admob.events.onInAppPurchaseRequested, function (e) { }, false);
         } else {
