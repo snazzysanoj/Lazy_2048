@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html id="viewport">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Lazy 2048</title>
+</head>
+
+<body onresize="app.onResize()">
+  <div id="fullpage" class="app">
+    <a class="button" onclick="app.startBannerAds()">Start Banner Ads</a>
+ 
+      <a class="button" onclick="app.showBannerAds()">Show Banner Ads</a>
+
+      <a class="button" onclick="app.requestInterstitial(true)">Request and show Interstitial</a>
+
+
+  </div>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    app.initialize();
+  </script>
+</body>
+
+</html>

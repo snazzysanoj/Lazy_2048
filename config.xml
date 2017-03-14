@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.snazzysanoj.lazy2048" version="5.3.1" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+  <name>Lazy 2048</name>
+  <description>
+    An addictive puzzle game inspired by the classic 2048 game, but dedicated for couch potatoes.
+  </description>
+  <author email="admin@snazzysanoj.in" href="https://www.snazzysanoj.in">Snazzy Sanoj</author>
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="LogLevel" value="VERBOSE"/>
+  <preference name="debuggable" value="false"/>
+  
+  <gap:plugin name="phonegap-admob" source="npm" />
+  
+  <icon src="res/icons/appFeel-512.png" />
+
+  <!-- iOS 7.0+ -->
+  <!-- iPhone / iPod Touch  -->
+  <icon src="icon-60.png" width="60" height="60" gap:platform="ios" />
+  <icon src="icon-60@2x.png" width="120" height="120" gap:platform="ios" />
+  <!-- iPad -->
+  <icon src="icon-76.png" width="76" height="76" gap:platform="ios" />
+  <icon src="icon-76@2x.png" width="152" height="152" />
+  <!-- iOS 6.1 -->
+  <!-- Spotlight Icon -->
+  <icon src="icon-40.png" width="40" height="40" gap:platform="ios" />
+  <icon src="icon-40@2x.png" width="80" height="80" gap:platform="ios" />
+
+  <!-- iPhone / iPod Touch -->
+  <icon src="icon.png" width="57" height="57" gap:platform="ios" />
+  <icon src="icon@2x.png" width="114" height="114" gap:platform="ios" />
+  <!-- iPad -->
+  <icon src="icon-72.png" width="72" height="72" gap:platform="ios" />
+  <icon src="icon-72@2x.png" width="144" height="144" gap:platform="ios" />
+  <!-- iPhone Spotlight and Settings Icon -->
+  <icon src="icon-Small.png" width="29" height="29" gap:platform="ios" />
+  <icon src="icon-Small@2x.png" width="58" height="58" gap:platform="ios" />
+  <!-- iPad Spotlight and Settings Icon -->
+  <icon src="icon-Small-50.png" width="50" height="50" gap:platform="ios" />
+  <icon src="icon-Small-50@2x.png" width="100" height="100" gap:platform="ios" />
+  
+  <platform name="android">
+    <icon src="res/icons/android/ic_launcher_ldpi.png" density="ldpi" />
+    <icon src="res/icons/android/ic_launcher_mdpi.png" density="mdpi" />
+    <icon src="res/icons/android/ic_launcher_hdpi.png" density="hdpi" />
+    <icon src="res/icons/android/ic_launcher_xhdpi.png" density="xhdpi" />
+    <icon src="res/icons/android/ic_launcher_xxhdpi.png" density="xxhdpi" />
+    <icon src="res/icons/android/ic_launcher_xxxhdpi.png" density="xxxhdpi" />
+  </platform>
+  
+  <platform name="ios">
+    <preference name="BackupWebStorage" value="local"/>
+    <!-- iOS 7.0+ -->
+    <!-- iPhone / iPod Touch  -->
+    <icon src="res/icons/ios/icon-60.png" width="60" height="60" />
+    <icon src="res/icons/ios/icon-60@2x.png" width="120" height="120" />
+    <!-- iPad -->
+    <icon src="res/icons/ios/icon-76.png" width="76" height="76" />
+    <icon src="res/icons/ios/icon-76@2x.png" width="152" height="152" />
+    <!-- iOS 6.1 -->
+    <!-- Spotlight Icon -->
+    <icon src="res/icons/ios/icon-40.png" width="40" height="40" />
+    <icon src="res/icons/ios/icon-40@2x.png" width="80" height="80" />
+    
+    <!-- iPhone / iPod Touch -->
+    <icon src="res/icons/ios/icon.png" width="57" height="57" />
+    <icon src="res/icons/ios/icon@2x.png" width="114" height="114" />
+    <!-- iPad -->
+    <icon src="res/icons/ios/icon-72.png" width="72" height="72" />
+    <icon src="res/icons/ios/icon-72@2x.png" width="144" height="144" />
+    <!-- iPhone Spotlight and Settings Icon -->
+    <icon src="res/icons/ios/icon-Small.png" width="29" height="29" />
+    <icon src="res/icons/ios/icon-Small@2x.png" width="58" height="58" />
+    <!-- iPad Spotlight and Settings Icon -->
+    <icon src="res/icons/ios/icon-Small-50.png" width="50" height="50" />
+    <icon src="res/icons/ios/icon-Small-50@2x.png" width="100" height="100" />
+  </platform>
+</widget>
