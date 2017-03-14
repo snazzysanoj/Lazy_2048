@@ -50,49 +50,5 @@ a.button {
   display: none !important;
 }
 
-.progressDialog {
-  margin: 0 auto;
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
 
-.progressDialog #message {
-  width: 100px;
-  float:left;
-}
 
-#spinner {
-  width: 10px;
-  height: 10px;
-  background-color: #333;
-  float:left;
-  margin: 5px auto;
-}
-
-.animated {
-  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
-  animation: rotateplane 1.2s infinite ease-in-out;
-}
-
-@-webkit-keyframes rotateplane {
-  0% { -webkit-transform: perspective(120px); background-color: #333; }
-  50% { -webkitf-transform: perspective(120px) rotateY(180deg); background-color: #ccc; }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg); background-color: #333; }
-}
-
-@keyframes rotateplane {
-  0% { 
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    background-color: #333;
-  } 50% { 
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    background-color: #ccc;
-  } 100% { 
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    background-color: #333;
-  }
-}

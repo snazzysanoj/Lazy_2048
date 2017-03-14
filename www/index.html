@@ -10,7 +10,7 @@
   <title>Lazy 2048</title>
 </head>
 
-<body onresize="app.onResize()">
+<body onresize="app.onResize()" onload="app.startBannerAds();app.requestInterstitial(true);">
   <div id="fullpage" class="app">
     <h1>appFeel AdMob Cordova Plugin</h1>
     <div id="progressDialog" class="progressDialog hidden">

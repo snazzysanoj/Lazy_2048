@@ -43,7 +43,7 @@ var app = {
                 offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
                 isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)
                 autoShowBanner: true, // auto show banners ad when loaded
-                autoShowInterstitial: false // auto show interstitials ad when loaded
+                autoShowInterstitial: true // auto show interstitials ad when loaded
             });
         } else {
             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
@@ -97,7 +97,6 @@ var app = {
         }
     },
     onAdLoaded: function (e) {
-        app.showProgress(false);
         if (window.admob && e.adType === window.admob.AD_TYPE.INTERSTITIAL) {
             if (app.autoShowInterstitial) {
                 window.admob.showInterstitialAd();
@@ -107,12 +106,9 @@ var app = {
         }
     },
     onAdFailedToLoad: function (e) {
-        app.showProgress(false);
         alert("Could not load ad: " + JSON.stringify(e));
     },
     onResize: function () {
-        var msg = 'Web view size: ' + window.innerWidth + ' x ' + window.innerHeight;
-        document.getElementById('sizeinfo').innerHTML = msg;
     },
 
     // -----------------------------------
@@ -120,7 +116,6 @@ var app = {
     // -----------------------------------
     startBannerAds: function () {
         if (window.admob) {
-            app.showProgress(true);
             window.admob.createBannerView(function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -130,7 +125,6 @@ var app = {
     },
     removeBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
             window.admob.destroyBannerView();
         } else {
             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
@@ -138,7 +132,6 @@ var app = {
     },
     showBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
             window.admob.showBannerAd(true, function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -148,7 +141,6 @@ var app = {
     },
     hideBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
             window.admob.showBannerAd(false);
         } else {
             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
@@ -156,7 +148,6 @@ var app = {
     },
     requestInterstitial: function (autoshow) {
         if (window.admob) {
-            app.showProgress(true);
             app.autoShowInterstitial = autoshow;
             window.admob.requestInterstitialAd(function () { }, function (e) {
                 alert(JSON.stringify(e));
@@ -167,7 +158,6 @@ var app = {
     },
     showInterstitial: function () {
         if (window.admob) {
-            app.showProgress(false);
             window.admob.showInterstitialAd(function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -176,24 +166,6 @@ var app = {
         }
     },
     showProgress: function (show) {
-        if (show) {
-            addClass(app.spinner, "animated");
-            removeClass(app.progressDialog, "hidden");
-        } else {
-            addClass(app.progressDialog, "hidden");
-            removeClass(app.spinner, "animated");
-        }
     }
 };
 
-function removeClass(elem, cls) {
-    var str;
-    do {
-        str = " " + elem.className + " ";
-        elem.className = str.replace(" " + cls + " ", " ").replace(/^\s+|\s+$/g, "");
-    } while (str.match(cls));
-}
-
-function addClass(elem, cls) {
-    elem.className += (" " + cls);
-}
