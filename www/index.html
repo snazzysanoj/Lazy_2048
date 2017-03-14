@@ -17,44 +17,26 @@
     app.requestInterstitial(true);
     window.location = "./index2.html";
   }
+
+  function performexitadstuff(){
+    app.startBannerAds();
+    app.requestInterstitial(true);
+    document.getElementById("fullpage").innerHTML="Please use the back button to exit the app.";
+  }
 </script>
   <div id="fullpage" class="app">
-    <h1>Lazy 2048</h1>
     <div id="progressDialog" class="progressDialog hidden">
       <div id="spinner"></div>
       <span id="message">Loading ads...</span>
     </div>
-    <p>
-      <a class="button" onclick="app.startBannerAds()">Start Banner Ads</a>
-      <a class="button" onclick="app.removeBannerAds()">Remove Banner Ads</a>
-    </p>
-    <p>
-      <a class="button" onclick="app.showBannerAds()">Show Banner Ads</a>
-      <a class="button" onclick="app.hideBannerAds()">Hide Banner Ads</a>
-    </p>
+    
     <p>
       <a class="button" onclick="performadstuff();">New Game</a>
     </p>
     <p>
-      <a class="button" onclick="app.requestInterstitial(false)">Request Interstitial</a>
-      <a class="button" onclick="app.showInterstitial()">Show Interstitial</a>
+      <a class="button" onclick="performexitadstuff();">Exit</a>
     </p>
-
-
-    
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript">
