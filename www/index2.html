@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html id="viewport">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Lazy 2048</title>
+</head>
+
+<body onresize="app.onResize()" >
+  
+
+
+<div id=container><canvas id=backcanvas></canvas><canvas id=canvas></canvas>
+    <div id=load>
+      <h1>Loading</h1></div>
+    <div id=home>
+      <h1>Lazy 2048</h1>
+      <p><b>How to play:</b><br>⭐️ Drag pieces around<br>⭐️ Stack those with the same number<br>⭐️ Get to 2048 to win the game<br>⭐️ Or Sit simply<small>(recommended for highly lazy ones)</small></p>
+      <div id=start>START</div>    
+      <div id=menu><input type=checkbox class=opt id=m checked=checked><label for=m>Music</label><br><input type=checkbox class=opt id=s checked=checked><label for=s>Sound FX</label><br><input type=checkbox class=opt id=q checked=checked><label for=q>High Quality</label></div>
+    </div>
+    <div id=end style=display:none>
+      <h1>You win</h1>
+      <p><b>Let's party!</b><br><small>Success is for those who try</small><br>A game by <a href="https://www.snazzysanoj.in/">Snazzy <small>Sanoj</small></a></p>
+      <div id=reset>PLAY AGAIN</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/index (2).js"></script>
+  <script type="text/javascript">
+    app.initialize();
+  </script>
+</body>
+
+</html>
